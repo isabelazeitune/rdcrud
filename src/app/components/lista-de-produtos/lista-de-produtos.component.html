@@ -1,0 +1,9 @@
+<!-- <p>lista-de-produtos works!</p> -->
+
+<!-- <ul>
+    <li *ngFor="let l of listaDeProdutos">
+        <a>{{l.desc}}</a>
+    </li>
+</ul> -->
+
+<app-produto *ngFor="let l of listaDeProdutos" [produto]="l"></app-produto>
