@@ -10,8 +10,9 @@ import { ContatoComponent } from './components/contato/contato.component';
 import { GruposComponent } from './components/grupos/grupos.component';
 import { ListaDeProdutosComponent } from './components/lista-de-produtos/lista-de-produtos.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ProdutoComponent } from './components/produto/produto.component'
-
+import { ProdutoComponent } from './components/produto/produto.component';
+import { NovoProdutoComponent } from './components/novo-produto/novo-produto.component'
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
 
@@ -23,13 +24,15 @@ import { ProdutoComponent } from './components/produto/produto.component'
     ContatoComponent,
     GruposComponent,
     ListaDeProdutosComponent,
-    ProdutoComponent
+    ProdutoComponent,
+    NovoProdutoComponent
   ],
 
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
 
   providers: [],

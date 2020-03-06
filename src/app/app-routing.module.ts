@@ -3,11 +3,16 @@ import { Routes, RouterModule } from '@angular/router';
 import { SobreComponent } from './components/sobre/sobre.component';
 import { HomeComponent } from './components/home/home.component';
 import { ContatoComponent } from './components/contato/contato.component';
-
+import { NovoProdutoComponent } from './components/novo-produto/novo-produto.component';
 
 const routes: Routes = [
   {
-    path: "",
+    path:"",
+    redirectTo: "home",
+    pathMatch: "full"
+  },
+  {
+    path: "home",
     component: HomeComponent
   },
   {
@@ -17,7 +22,18 @@ const routes: Routes = [
   {
     path: "contato",
     component: ContatoComponent
+  },
+  {
+    path: "novoproduto",
+    component: NovoProdutoComponent
+  },
+  {
+    path:"**",
+    redirectTo: "home",
+    pathMatch: "full"
   }
+
+
 ];
 
 @NgModule({

@@ -1,7 +1,12 @@
 <nav>
     <ul>
-        <li><a href="#" routerLink="/">Home</a></li>
+        <!-- <li class="destaque"><a href="#" routerLink="/">Home</a></li>
         <li><a href="#" routerLink="/sobre">Sobre</a></li>
-        <li><a href="#" routerLink="/contato">Contato</a></li>
+        <li><a href="#" routerLink="/contato">Contato</a></li> -->
+        <!-- <li [ngClass]="{'destaque': item.ativo}" *ngFor="let item of itens"> -->
+        <li routerLinkActive="destaque" *ngFor="let item of itens">
+            <!-- <a href="#" (click)="destacar(item)" routerLink="{{item.route}}">{{item.label}}</a> -->
+            <a routerLink="{{item.route}}">{{item.label}}</a>
+        </li>
     </ul>
 </nav>
